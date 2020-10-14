@@ -25,7 +25,7 @@ jobs:
         run: g++ -Wall -Werror -std=c++17 *.cpp -o output
 
       - name: generate output
-        run: ./harc.sh 
+        run: ./harc.sh
 
       - name: I/O test
         run: diff kimenetek.txt jo_kimenetek.txt
