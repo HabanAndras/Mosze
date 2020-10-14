@@ -8,7 +8,7 @@ int main(int argc, char ** argv) {
 		
 		Szorny s1 = Szorny::parseUnit(argv[2]);
 		Kalandor s2(Szorny::parseUnit(argv[2]));
-		while (s1.getHp() > 0 && s2.getHp() > 0) {=
+		while (s1.getHp() > 0 && s2.getHp() > 0) {
 			s1.tamad(s2);
 			if (s2.getHp() > 0) {
 				s2.tamad(s1);
