@@ -82,9 +82,10 @@ Szorny Szorny::parseUnit(const std::string & fajlnev) {
                 }
             }
         }
-        f.close();
+        
 
         return Szorny(name, hp, dmg);
     }
+	f.close();
 }
 
