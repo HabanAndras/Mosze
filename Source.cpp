@@ -8,14 +8,14 @@ int main(int argc, char ** argv) {
 		
 		Szorny s1 = Szorny::parseUnit(argv[2]);
 		Kalandor s2(Szorny::parseUnit(argv[2]));
-		while (s1.getHp() > 0 && s2.getHp() > 0) {
-			s1.tamad(s2);
-			if (s2.getHp() > 0) {
-				s2.tamad(s1);
-			}
-		}
-		if (s1.getHp() == 0) std::cout << s2.getName() << " wins. Remaining HP: " << s2.getHp() << std::endl;
-		if (s2.getHp() == 0) std::cout << s1.getName() << " wins. Remaining HP: " << s1.getHp() << ", current level: " << s1.getLvl() << ", current experience: " << s1.getXp() << std::endl;
+		//while (s1.getHp() > 0 && s2.getHp() > 0) {
+			//s1.tamad(s2);
+			//if (s2.getHp() > 0) {
+				//s2.tamad(s1);
+			//}
+		//}
+		//if (s1.getHp() == 0) std::cout << s2.getName() << " wins. Remaining HP: " << s2.getHp() << std::endl;
+		//if (s2.getHp() == 0) std::cout << s1.getName() << " wins. Remaining HP: " << s1.getHp() << ", current level: " << s1.getLvl() << ", current experience: " << s1.getXp() << std::endl;
 		std::cout<<"Nincs baj"<<std::endl;
 		return 0;
 
@@ -23,6 +23,8 @@ int main(int argc, char ** argv) {
      catch (int e) {
         switch(e) {
             case 56: std::cout << "File does not exist!" << std::endl;
+			std::cout<<argv[2]<<std::endl;
+			std::cout<<argv[1]<<std::endl;
                 break;
             case 57: std::cout << "Invalid character value!!" << std::endl;
                 break;
