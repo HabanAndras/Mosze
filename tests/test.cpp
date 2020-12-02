@@ -230,6 +230,24 @@ jatek.setMap(palya);
 ASSERT_THROW(jatek.run(), Game::NotInitializedException);
 }
 
+TEST(GameTest,GetMonsterdb_test){
+Game jatek;
+Damage d;
+d.physical = 3;
+d.magical = 1;
+Map palya("palya1.txt");
+Monster monster1("Sotetvarazslo", 250, d, 1, 2.0);
+Hero hos("Prince Aidan of Khanduras", 30, d, 1, 1.1, 20, 5, 1, 1, 1, 0.9, 1, 1);
+jatek.setMap(palya);
+Monster monster2("Hosarkany", 300, d, 1, 2.4);
+jatek.putHero(hos,1,1);
+jatek.putMonster(monster1,1,3);
+jatek.putMonster(monster2,1,3);
+EXPECT_EQ(jatek.getMonsterdb(1,3),2);
+
+
+}
+
 
 
 
