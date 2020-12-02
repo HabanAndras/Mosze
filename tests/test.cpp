@@ -218,6 +218,20 @@ jatek.putHero(hos,1,1);
 ASSERT_THROW(jatek.setMap(palya), Game::AlreadyHasUnitsException);
 }
 
+TEST(GameTest,Gamenotinitial_test){
+Game jatek;
+Damage d;
+d.physical = 3;
+d.magical = 1;
+Map palya("palya1.txt");
+Hero hos("Prince Aidan of Khanduras", 30, d, 1, 1.1, 20, 5, 1, 1, 1, 0.9, 1, 1);
+ASSERT_THROW(jatek.run(), Game::NotInitializedException);
+jatek.setMap(palya);
+ASSERT_THROW(jatek.run(), Game::NotInitializedException);
+jatek.putHero(hos,1,1);
+EXPECT_NO_THROW(jatek.run());
+}
+
 
 
 
