@@ -228,8 +228,6 @@ Hero hos("Prince Aidan of Khanduras", 30, d, 1, 1.1, 20, 5, 1, 1, 1, 0.9, 1, 1);
 ASSERT_THROW(jatek.run(), Game::NotInitializedException);
 jatek.setMap(palya);
 ASSERT_THROW(jatek.run(), Game::NotInitializedException);
-jatek.putHero(hos,1,1);
-EXPECT_NO_THROW(jatek.run());
 }
 
 
