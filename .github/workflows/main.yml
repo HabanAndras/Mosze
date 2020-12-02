@@ -1,13 +1,36 @@
-name: JsonParser Tests
-on: push
+name: Build_and_test
+
+on:
+  push
+
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
+    container: zh5uo8/mosze:latest
+   
     steps:
       - uses: actions/checkout@v2
-      - name: Gtest/Cmake instalalas
-        run: sudo apt install libgtest-dev && sudo apt install cmake && cd /usr/src/gtest && sudo cmake . && sudo make  && sudo cp *.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
-      - name: cmake
-        run: cd tests && cmake . && make
-      - name: Teszt futtatas
-        run: cd tests && ./runTests
+
+      - name: CPPCheck Static Code Analysis
+        run: make sca
+
+      - name: Upload CPPCheck report as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: report
+          path: report.txt
+
+      - name: Make
+        run: make build
+
+      - name: generate output
+        run: ./harc.sh 
+
+      - name: I/O test 1
+        run: diff scenario_1_output.txt output1.txt
+      - name: I/O test 2
+        run: diff scenario_2_output.txt output2.txt
+
+      - name: Valgrind memory check
+        run: make memtest
+
