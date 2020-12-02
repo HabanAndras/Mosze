@@ -74,7 +74,7 @@ TEST(Maptest, Getter_test) {
 	ASSERT_NO_THROW(Map("palya1.txt"));
 	Map palya("palya1.txt");
 	EXPECT_EQ(palya.get(1,1),1);
-	EXPECT_EQ(palya.get(5,5), 0);
+	EXPECT_EQ(palya.get(1,0), 0);
 }
 
 TEST(unittests, Exceptions_test) {
