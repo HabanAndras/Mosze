@@ -177,8 +177,20 @@ Damage d;
 d.physical = 3;
 d.magical = 1;
 Hero hos("Prince Aidan of Khanduras", 30, d, 1, 1.1, 20, 5, 1, 1, 1, 0.9, 1, 1);
-Monster monster1("Sotetvarazslo", 250, d, 1, 2.0);
 ASSERT_THROW(jatek.putHero(hos,1,1), Map::WrongIndexException);
+}
+
+TEST(GameTest,Only_one_hero_test){
+Game jatek;
+Damage d;
+d.physical = 3;
+d.magical = 1;
+Map palya("palya1.txt");
+jatek.setMap(palya);
+Hero hos("Prince Aidan of Khanduras", 30, d, 1, 1.1, 20, 5, 1, 1, 1, 0.9, 1, 1);
+Hero hos2("Hosarkany", 30, d, 1, 1.1, 20, 5, 1, 1, 1, 0.9, 1, 1);
+jatek.putHero(hos,1,1);
+ASSERT_THROW(jatek.putHero(hos2,1,3), Game::AlreadyHasHeroException);
 }
 
 
