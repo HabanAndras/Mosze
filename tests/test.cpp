@@ -173,6 +173,8 @@ EXPECT_TRUE(hos==hero);
 
 TEST(GameTest,Map_is_not_init_test){
 Game jatek;
+Hero hos("Prince Aidan of Khanduras", 30, d, 1, 1.1, 20, 5, 1, 1, 1, 0.9, 1, 1);
+Monster monster1("Sotetvarazslo", 250, d, 1, 2.0);
 ASSERT_THROW(jatek.putHero(hos,1,1), Map::WrongIndexException);
 }
 
