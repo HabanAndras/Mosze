@@ -171,7 +171,10 @@ EXPECT_TRUE(hos==hero);
 }
 
 
-
+TEST(GameTest,Map_is_not_init_test){
+Game jatek;
+ASSERT_THROW(jatek.putHero(hos,1,1), Map::WrongIndexException);
+}
 
 
 int main(int argc, char ** argv) {
