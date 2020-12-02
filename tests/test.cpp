@@ -214,7 +214,7 @@ d.magical = 1;
 Map palya("palya1.txt");
 jatek.setMap(palya);
 Hero hos("Prince Aidan of Khanduras", 30, d, 1, 1.1, 20, 5, 1, 1, 1, 0.9, 1, 1);
-jatek.putHero(hos,1,1)
+jatek.putHero(hos,1,1);
 ASSERT_THROW(jatek.setMap(palya), Game::AlreadyHasUnitsException);
 }
 
