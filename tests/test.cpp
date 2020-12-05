@@ -254,6 +254,18 @@ EXPECT_EQ(hos.x,6);
 EXPECT_EQ(hos.y,1);
 }
 
+TEST(MarkedMapTest,GetMosterposition_test){
+std::string vart = "1 3 9 5 ";
+MarkedMap kesz("markedmap.txt");
+std::vector<Koordinata> v = kesz.getMonsterPositions('2');
+testing::internal::CaptureStdout();
+for (int i = 0; i < v.size(); i++) {
+	cout << v[i].x <<" "<<v[i].y <<" "<< endl;
+}
+std::string output = testing::internal::GetCapturedStdout();
+EXPECT_EQ(vart, output);
+}
+
 
 int main(int argc, char ** argv) {
 	::testing::InitGoogleTest(&argc, argv);
