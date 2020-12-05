@@ -260,7 +260,7 @@ MarkedMap kesz("markedmap.txt");
 std::vector<Koordinata> v = kesz.getMonsterPositions('2');
 testing::internal::CaptureStdout();
 for (int i = 0; i < v.size(); i++) {
-	std::cout << v[i].x <<" "<<v[i].y <<" "<< std::endl;
+	std::cout << v[i].x <<" "<<v[i].y <<" ";
 }
 std::string output = testing::internal::GetCapturedStdout();
 EXPECT_EQ(vart, output);
