@@ -247,7 +247,7 @@ jatek.putMonster(monster2,1,3);
 EXPECT_EQ(jatek.getMonsterdb(1,3),2);
 }
 
-TEST(MarkedMapTest,GetHeroposition test){
+TEST(MarkedMapTest,GetHeroposition_test){
 MarkedMap kesz("markedmap.txt");
 Koordinata hos = kesz.getHeroPosition();
 EXPECT_EQ(hos.x,6);
