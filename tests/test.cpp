@@ -245,12 +245,14 @@ jatek.putHero(hos,1,1);
 jatek.putMonster(monster1,1,3);
 jatek.putMonster(monster2,1,3);
 EXPECT_EQ(jatek.getMonsterdb(1,3),2);
-
-
 }
 
-
-
+TEST(MarkedMapTest,GetHeroposition test){
+MarkedMap kesz("markedmap.txt");
+Koordinata hos = kesz.getHeroPosition();
+EXPECT_EQ(hos.x,6);
+EXPECT_EQ(hos.y,1);
+}
 
 
 int main(int argc, char ** argv) {
