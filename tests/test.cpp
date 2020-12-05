@@ -3,6 +3,7 @@
 #include "Hero.h"
 #include "Map.h"
 #include "Damage.h"
+#include "MarkedMap.h"
 #include "Game.h"
 #include "gtest/gtest.h"
 
