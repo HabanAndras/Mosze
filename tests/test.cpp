@@ -149,6 +149,17 @@ Monster monster1("Sotetvarazslo", 250, d,1, 2.0);
 EXPECT_TRUE(monster==monster1);
 }
 
+TEST(GameTest,Map_is_not_init_test){
+Game jatek;
+Damage d;
+d.physical = 3;
+d.magical = 1;
+Monster monster1("Sotetvarazslo", 250, d, 1, 2.0);
+Hero hos("Prince Aidan of Khanduras", 30, d, 1, 1.1, 20, 5, 1, 1, 1, 0.9,3,1 1, 1);
+ASSERT_THROW(jatek.putHero(hos,1,1), Map::WrongIndexException);
+ASSERT_THROW(jatek.putMonster(monster1,1,3), Map::WrongIndexException);
+}
+
 
 int main(int argc, char ** argv) {
 	::testing::InitGoogleTest(&argc, argv);
