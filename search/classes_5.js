@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['koordinata',['Koordinata',['../structKoordinata.html',1,'']]]
+  ['map',['Map',['../classMap.html',1,'']]],
+  ['monster',['Monster',['../classMonster.html',1,'']]]
 ];

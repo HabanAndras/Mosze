@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['occupiedexception',['OccupiedException',['../classGame_1_1OccupiedException.html',1,'Game']]]
+  ['parseexception',['ParseException',['../classJSON_1_1ParseException.html',1,'JSON']]]
 ];
