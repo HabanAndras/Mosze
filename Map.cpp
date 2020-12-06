@@ -29,8 +29,7 @@ Map::~Map()
 Map::type Map::get(int x, int y) const {
 	if (y >= (int)palya.size() || y < 0 || x < 0 || x >= (int)palya[y].length()) throw WrongIndexException("Nem letezo index lett megadva!");
 	if (palya[y][x] == ' ') return Map::type::Free;
-	else if (palya[y][x] == '#') return Map::type::Wall;
-	else return Map::type::Unknow;
+	if (palya[y][x] == '#') return Map::type::Wall;
 }
 
 int Map::getMagassag()const {

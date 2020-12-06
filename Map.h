@@ -10,10 +10,10 @@
 
 class Map
 {
-protected:
+private:
 	std::vector <std::string> palya;
 public:
-	enum type { Wall, Free,Unknow};
+	enum type { Wall, Free };
 	Map(const std::string &);
 	Map(){}
 	virtual ~Map();
