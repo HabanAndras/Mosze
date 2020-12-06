@@ -155,7 +155,7 @@ Damage d;
 d.physical = 3;
 d.magical = 1;
 Monster monster1("Sotetvarazslo", 250, d, 1, 2.0);
-Hero hos("Prince Aidan of Khanduras", 30, dhero, 1, 1.1, 20, 5, 1, 1, 1, 0.9, 1, 1);
+Hero hos("Prince Aidan of Khanduras", 30, d, 1, 1.1, 20, 5, 1, 1, 1, 0.9, 1, 1);
 ASSERT_THROW(jatek.putHero(hos,1,1), Map::WrongIndexException);
 ASSERT_THROW(jatek.putMonster(monster1,1,3), Map::WrongIndexException);
 }
