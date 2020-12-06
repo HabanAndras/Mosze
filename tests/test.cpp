@@ -121,6 +121,33 @@ TEST(Exceptiontest,Nincs_hibauzenet_test){
     ASSERT_NO_THROW(Monster::parse("Hosarkany.json"));
 }
 
+TEST(Unittest,Fight_function_test){
+Hero hero {Hero::parse("Dark_Wanderer.json")};
+Monster monster{Monster::parse("Hosarkany.json")};
+hero.fightTilDeath(monster);
+EXPECT_TRUE(monster.isAlive());
+EXPECT_FALSE(hero.isAlive());
+}
+
+TEST(Unittest, Hero_Monster_different_test) {
+Hero hero {Hero::parse("Dark_Wanderer.json")};
+Monster monster{Monster::parse("Hosarkany.json")};
+std::string tipush = typeid(hero).name();
+std::string tipusm = typeid(monster).name();
+tipush.erase(0, 1);
+tipusm.erase(0, 1);
+EXPECT_EQ(tipush, "Hero");
+EXPECT_EQ(tipusm, "Monster");
+}
+
+TEST(Unittest,Monster_parse_test){
+Monster monster{Monster::parse("Sotetvarazslo.json")};
+Damage d;
+d.physical = 40;
+d.magical = 0;
+Monster monster1("Sotetvarazslo", 250, d,1, 2.0);
+EXPECT_TRUE(monster==monster1);
+}
 
 
 int main(int argc, char ** argv) {
