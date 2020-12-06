@@ -60,6 +60,30 @@ TEST(Exceptiontest,Nem_letezo_fajl_test){
     ASSERT_THROW(JSON::parseFromFile("Lathatatlan.json"), JSON::ParseException);
 }
 
+TEST(Unittest,Badscenario_exception_test){
+std::string vart = "The provided scenario file is invalid.";
+testing::internal::CaptureStdout();
+JSON scenario = JSON::parseFromFile("badscenario.json");
+if (!(scenario.count("hero") && scenario.count("monsters")))std::cout << "The provided scenario file is invalid.";
+std::string output = testing::internal::GetCapturedStdout();
+EXPECT_EQ(vart, output);
+}
+
+TEST(Maptest, Getter_test) {
+	ASSERT_NO_THROW(Map("palya1.txt"));
+	Map palya("palya1.txt");
+	EXPECT_EQ(palya.get(1,1),1);
+	EXPECT_EQ(palya.get(1,0), 0);
+}
+
+TEST(unittests, Exceptions_test) {
+	ASSERT_THROW(Map("Nemletezo_ivek.txt"), std::runtime_error);
+	Map test("palya1.txt");
+	ASSERT_THROW(test.get(-8,2), Map::WrongIndexException);
+	ASSERT_THROW(test.get(3,-2), Map::WrongIndexException);
+	ASSERT_THROW(test.get(300, 400), Map::WrongIndexException);
+}
+
 
 
 int main(int argc, char ** argv) {
