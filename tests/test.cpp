@@ -153,6 +153,29 @@ Monster monster1("Sotetvarazslo", 250, d,1, 2.0);
 EXPECT_TRUE(monster==monster1);
 }
 
+TEST(MarkedMapTest,GetHeroposition_test){
+MarkedMap kesz("markedmap.txt");
+Koordinata hos = kesz.getHeroPosition();
+EXPECT_EQ(hos.x,6);
+EXPECT_EQ(hos.y,1);
+}
+
+TEST(MarkedMapTest,GetMosterposition_test){
+std::string vart = "1 3 9 5 ";
+MarkedMap kesz("markedmap.txt");
+std::vector<Koordinata> v = kesz.getMonsterPositions('2');
+testing::internal::CaptureStdout();
+for (int i = 0; i < v.size(); i++) {
+	std::cout << v[i].x <<" "<<v[i].y <<" ";
+}
+std::string output = testing::internal::GetCapturedStdout();
+EXPECT_EQ(vart, output);
+}
+
+TEST(PreparedGameTest,Run_test){
+ASSERT_NO_THROW(PreparedGame jatek("Scenario.json"));
+}
+
 
 int main(int argc, char ** argv) {
 	::testing::InitGoogleTest(&argc, argv);
