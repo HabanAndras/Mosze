@@ -2,7 +2,7 @@
 
 | Név | Github azonosito  | Javasolt relatív érdemjegy | Becsült óra | Indoklás  | 
 | --- | ---- | --- | ------------------ | --------- |
-| Habán András | @HabanAndras | 0 | 135-140 | Unit tesztek javítását folyamatosan végezte, amit meg tudott csinálni, hamar megcsinálta. |
+| Habán András | @HabanAndras | 0 | 135-140 | Unit tesztek javítását folyamatosan végezte, amit meg tudott csinálni, hamar megcsinálta, többieknek is igyekezett segíteni. |
 | Tranta Máté | @tmate93 | 0 | <10 | Pótolni. |
 | Tóth Norbert | @tothi517 | 0 | 40-50 | Pótolni. |
 
@@ -27,8 +27,8 @@
 | defense | Merge: 11.27 | 1 | @Holdmedve |
 | damage | Merge: 11.29 | 0 | @BakiHUN  |
 | markedmap | Merge: 12.06 | 0 | @BakiHUN |
-| preparedgame | 12.08  | 0 | @BakiHUN  |
-| light radius | 12.09 | 1 | @Holdmedve |
+| preparedgame | Merge:12.08  | 0 | @BakiHUN  |
+| light radius | Merge:12.09 | 1 | @Holdmedve |
 | rendering | nem készült el | - | -
 
 # Unit tesztek
@@ -45,15 +45,10 @@
 
 # Kód dokumentáció
 
-| Teljesen dokumentált osztály | Részben dokumentált osztály | Nem dokumentált osztály |
+| Teljesen dokumentált osztályok | Részben dokumentált osztályok | Nem dokumentált osztályok |
 | --- | --- | --- | 
-| `Game` | --- | --- | 
-| `JSON` | --- | --- |  
-| `Monster` | --- | --- | 
-| `Hero` | --- | --- | 
-| `PreparedGame` | --- | --- | 
-| `Map` | --- | --- | 
-| `MarkedMap` | --- | --- | 
+| `Game` `PreparedGame``Map``MarkedMap``JSON``Monster``Hero` | --- | --- | 
+
 
 # Mindenféle számok
 
