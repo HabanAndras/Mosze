@@ -2,7 +2,84 @@
 
 | Név | Github azonosito  | Javasolt relatív érdemjegy | Becsült óra | Indoklás  | 
 | --- | ---- | --- | ------------------ | --------- |
-| Foo Bar | @nevergo | 0 | 15-20 | Szépen  csinálta a dolgát. |
-| Leyh Zee | @nagiveyo | -2 | <10 | Sokszor Sta Hanovnak kellett megcsinálnia helyette a dolgokat. |
-| Sta Hanov | @uup | +1 | 40-50 | Mindent megcsinált, és amikor Leyh Zee helyett be kellett ugrani, elvállalta a feladadokat, valamint a másik csapatnak a bírálatok zömét Ő csinálta |
+| Habán András | @HabanAndras | 0 | 135-140 | Unit tesztek javítását folyamatosan végezte, amit meg tudott csinálni, hamar megcsinálta. |
+| Tranta Máté | @tmate93 | 0 | <10 | Pótolni. |
+| Tóth Norbert | @tothi517 | 0 | 40-50 | Pótolni. |
+
+
+# Befejezett feladatok
+
+| Feladat | Merge ideje a határidóhöz (nap) | Change request körök | Reviewer | 
+| ------- | ------------------------------- | -------------------- | -------- |
+| Feladat 1 | -4 | 4 | @hegyhati | 
+| Feladat 2 | -1 | 2 | @wajzy |
+| jsonparser | -1 | 2 | @wajzy |
+| levelup | -1 | 2 | @oliverosz |
+| attackspeed | -1 | 0 | @vizvezetek |
+| documentation | 0 | 0 | @Holdmedve / @BakiHUN |
+| unittest | 0 | 1 | @Holdmedve / @BakiHUN |
+| makefile | -6 | 0 | @hegyhati |
+| refactor | +5 | 2 | @hegyhati |
+| docker | +1 | 1 | @hegyhati |
+| jsonpimp | Merge: 11.23 | 0 | @Holdmedve |
+| map | Merge: 11.26 | 0 | @BakiHUN |
+| game | Merge: 12.04 | 0 | @BakiHUN |
+| defense | Merge: 11.27 | 1 | @Holdmedve |
+| damage | Merge: 11.29 | 0 | @BakiHUN  |
+| markedmap | Merge: 12.06 | 0 | @BakiHUN |
+| preparedgame | 12.08  | 0 | @BakiHUN  |
+| light radius | 12.09 | 1 | @Holdmedve |
+| rendering | nem készült el | - | -
+
+# Unit tesztek
+
+| Osztály | Publikus metódusok száma | Unit tesztelt metódusok száma | Unit tesztek száma |
+| --- | --- | --- | --- |
+| `JSON` | 7 | 4 | 7 |
+| `Monster` | 9 | 1 | 4 | 
+| `Hero` | 3 | 2 | 4 |
+| `Map` | 4 | 2 | 2 |
+| `MarkedMap` | 3 | 2 | 2 |
+| `Game` | 5 | 5 | 6 |
+| `PreparedGame` | 1 | 1 | 1 |
+
+# Kód dokumentáció
+
+| Teljesen dokumentált osztály | Részben dokumentált osztály | Nem dokumentált osztály |
+| --- | --- | --- | 
+| `Game` | --- | --- | 
+| `JSON` | --- | --- |  
+| `Monster` | --- | --- | 
+| `Hero` | --- | --- | 
+| `PreparedGame` | --- | --- | 
+| `Map` | --- | --- | 
+| `MarkedMap` | --- | --- | 
+
+# Mindenféle számok
+
+ - Összes cpp kódsor : 1498
+ - Összes shell kódszor:12
+ - Összes Makefile kódsor : 30
+ - Összes Dockerfile kódsor : 5
+ - Összes Cmake kódsor: 9
+ - cppcheck
+   - warning :
+   - style :
+   - performance :
+   - unusedFunction : 
+   - missingInclude : 
+
+# Implicit megtanult dolgok
+Olyanok, amik nem a tárgy anyaga, de muszáj/hasznos volt elsajátítani:
+ - alapvető shell/python scripting
+ - Objektumorientált C++ programozás alapos ismerete(Helyenként az OOp tananyagán is túlmutató dolgok)
+
+# Feedback (optional)
+-Inkább megvárjuk az értékelést és majd kérdőívben majd kifejtjük a kérdéseket.
+
+# Üzenet a jövőbe (optional)
+-Sokkal több időt kell ráfordítani a fejlesztésre, mint magára az eszközökre.
+
+
+
 
